@@ -1,0 +1,210 @@
+/* ========== Reset and Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base body layout and typography */
+body {
+  padding: 30px 10px;
+  height: 100vh;
+  font-family: sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(205, 205, 205);
+}
+
+/* Heading style */
+.heading {
+  font-size: 35px;
+  color: #222222d0;
+}
+
+/* Cards wrapper layout */
+#cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== Responsive Typography ========== */
+html {
+  font-size: 100%;
+}
+@media (max-width: 768px) {
+  html { font-size: 90%; }
+}
+@media (max-width: 480px) {
+  html { font-size: 85%; }
+}
+
+/* ========== Utility Classes ========== */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 0.5rem; }
+.p-1 { padding: 0.5rem; }
+
+/* ========== Layout Helpers ========== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== Button Styling ========== */
+.btn {
+  width: 100%;
+  background-color: transparent;
+  display: inline-block;
+  padding: 1.5rem 1.5rem;
+  color: #222;
+  font-size: 18px;
+  border: none;
+  text-decoration: none;
+  transition: background 0.6s;
+}
+.btn:hover {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* ========== Card Component ========== */
+.card {
+  width: 350px;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card inner content container */
+.wt {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Card header - name and availability */
+.top-pal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Availability badge */
+.avaibility {
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Conditional availability styling */
+.avaibility-yes {
+  background-color: rgba(39, 187, 155, 0.625);
+  color: white;
+}
+.avaibility-not {
+  background-color: rgba(202, 174, 17, 0.573);
+  color: white;
+}
+
+/* Price tag styling */
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Profile image styling */
+img {
+  height: 130px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ========== Skills Tag Section ========== */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: sans-serif;
+}
+
+/* Individual skill tag */
+.skill-tag {
+  padding: 6px 12px;
+  background-color: #c5c5c5;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #333333d9;
+}
+
+/* "More" tag to indicate extra skills */
+.more-tag {
+  background-color: #2196F3;
+  color: white;
+  font-weight: bold;
+}
+
+/* ========== Card Info Section ========== */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Name styling */
+.info h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Subtitle and detail text */
+.info h4, h6 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333bb;
+}
+
+/* Special highlight for bottom detail */
+.info h6 {
+  color: #2196F3;
+}
+
+/* ========== Card Description Paragraph ========== */
+.card p {
+  font-size: 15px;
+  color: #333333bb;
+  text-align: center;
+
+  /* Multiline ellipsis if text exceeds 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========== Company Section (e.g., icons or company info) ========== */
+.comp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.comp i {
+  font-size: 18px;
+  color: #2196F3;
+}
